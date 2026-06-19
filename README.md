@@ -1,12 +1,12 @@
 <!--
   BEFORE PUBLISHING, replace every bracketed placeholder:
-  Andrew Diola, diolaandrew@gmail.com, www.linkedin.com/in/andrewdiola, [github.com/you],
+  Edwin Bello, edconnect29@yahoo.com, www.linkedin.com/in/edwinbello, [wynnsben.github.io],
   [Honeypot tool], [Ticketing platform], [Year]
   Also swap the italic "e.g." notes inside each case for what you actually did,
   and adjust the 15-Day Timeline to match your real schedule.
 -->
 
-# 🛡️ Andrew Diola — SOC Analyst Portfolio
+# 🛡️ Edwin Bello — SOC Analyst Portfolio
 
 **15-day self-directed training lab:** SIEM threat detection, network forensics, honeypot threat intelligence, and incident response.
 
@@ -39,7 +39,7 @@
 
 ## About
 
-I'm Andrew Diola, an aspiring SOC Analyst building hands-on detection and response skills outside the classroom. With a solid foundational background in IT support and networking, I’ve always been fascinated by how adversaries exploit system vulnerabilities. This curiosity drove me to transition into cybersecurity, where I can actively defend digital assets. I am currently targeting an entry-level SOC Analyst role where I can apply my investigative mindset and help organizations mitigate real-time threats.
+I'm Edwin Bello, an aspiring SOC Analyst building hands-on detection and response skills outside the classroom. With a solid foundational background in IT support and networking, I’ve always been fascinated by how adversaries exploit system vulnerabilities. This curiosity drove me to transition into cybersecurity, where I can actively defend digital assets. I am currently targeting an entry-level SOC Analyst role where I can apply my investigative mindset and help organizations mitigate real-time threats.
 
 **Lab stack:** Splunk Enterprise · BOTSv2 Dataset · Wireshark · Kali Linux · [Honeypot tool] · [Ticketing platform]
 
