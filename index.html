@@ -186,6 +186,73 @@
     letter-spacing: 0.1em;
   }
 
+  /* HERO VISUAL — top-right preview cards */
+  .hero-visual {
+    position: absolute;
+    top: 130px;
+    right: 80px;
+    width: 360px;
+    z-index: 1;
+  }
+  .hero-visual-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--accent);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+    overflow: hidden;
+    transition: transform 0.25s, border-color 0.25s;
+  }
+  .hero-visual-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0,170,255,0.5);
+  }
+  .hero-visual-card.card-1 {
+    width: 100%;
+    transform: rotate(-1.5deg);
+  }
+  .hero-visual-card.card-2 {
+    width: 84%;
+    margin: -28px 0 0 auto;
+    transform: rotate(1.5deg);
+    position: relative;
+  }
+  .hero-visual-card.card-1:hover { transform: rotate(-1.5deg) translateY(-4px); }
+  .hero-visual-card.card-2:hover { transform: rotate(1.5deg) translateY(-4px); }
+  .hero-visual-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: var(--bg3);
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-visual-bar .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .hero-visual-bar .dot.red { background: var(--red); }
+  .hero-visual-bar .dot.yellow { background: var(--yellow); }
+  .hero-visual-bar .dot.green { background: var(--green); }
+  .hero-visual-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    margin-left: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .hero-visual-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  @media (max-width: 1180px) {
+    .hero-visual { display: none; }
+  }
+
   /* SECTION SHARED */
   section {
     padding: 100px 80px;
@@ -607,6 +674,25 @@
 
 <!-- HERO -->
 <section id="hero">
+
+  <!-- TOP-RIGHT VISUAL SHOWCASE -->
+  <div class="hero-visual">
+    <div class="hero-visual-card card-1">
+      <div class="hero-visual-bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="hero-visual-label">splunk_dashboard.gif</span>
+      </div>
+      <img src="images/splunk-dashboard.gif" alt="Splunk dashboard showing download speed performance metrics"/>
+    </div>
+    <div class="hero-visual-card card-2">
+      <div class="hero-visual-bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="hero-visual-label">wireshark_capture.gif</span>
+      </div>
+      <img src="images/wireshark-capture.gif" alt="Wireshark packet capture analysis"/>
+    </div>
+  </div>
+
   <div class="hero-eyebrow">SOC Analyst Portfolio</div>
   <h1>Hunting<br/>threats.<br/><span>Closing cases.</span></h1>
   <p class="hero-sub">Security operations, threat detection, and incident response — documented in the field.</p>
