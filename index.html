@@ -110,6 +110,32 @@
     background: radial-gradient(circle, rgba(0,170,255,0.07) 0%, transparent 70%);
     pointer-events: none;
   }
+
+  /* HERO LAYOUT: text left, visual right */
+  .hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    width: 100%;
+  }
+  .hero-left {
+    flex: 1;
+    min-width: 0;
+  }
+  .hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-visual img {
+    width: 100%;
+    max-width: 560px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,170,255,0.08);
+  }
+
   .hero-eyebrow {
     font-family: var(--mono);
     font-size: 12px;
@@ -591,6 +617,8 @@
     .hero-stats { gap: 28px; flex-wrap: wrap; }
     .case-grid { grid-template-columns: 1fr; }
     .modal { padding: 28px 20px; }
+    .hero-inner { flex-direction: column; }
+    .hero-visual { order: -1; margin-bottom: 32px; }
   }
 </style>
 </head>
@@ -608,25 +636,32 @@
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-eyebrow">SOC Analyst Portfolio</div>
-  <h1>Hunting<br/>threats.<br/><span>Closing cases.</span></h1>
-  <p class="hero-sub">Security operations, threat detection, and incident response — documented in the field.</p>
-  <div class="terminal-line">
-    <span class="prompt">analyst@soc:~$</span>
-    <span id="typed-text"></span><span class="cursor"></span>
-  </div>
-  <div class="hero-stats">
-    <div class="stat-item">
-      <div class="stat-num">4<span>+</span></div>
-      <div class="stat-label">Lab Cases</div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow">SOC Analyst Portfolio</div>
+      <h1>Hunting<br/>threats.<br/><span>Closing cases.</span></h1>
+      <p class="hero-sub">Security operations, threat detection, and incident response — documented in the field.</p>
+      <div class="terminal-line">
+        <span class="prompt">analyst@soc:~$</span>
+        <span id="typed-text"></span><span class="cursor"></span>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">4<span>+</span></div>
+          <div class="stat-label">Lab Cases</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">3<span>+</span></div>
+          <div class="stat-label">Tools Used</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">100<span>%</span></div>
+          <div class="stat-label">Hands-On</div>
+        </div>
+      </div>
     </div>
-    <div class="stat-item">
-      <div class="stat-num">3<span>+</span></div>
-      <div class="stat-label">Tools Used</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">100<span>%</span></div>
-      <div class="stat-label">Hands-On</div>
+    <div class="hero-visual">
+      <img src="wireshark-capture.gif" alt="Wireshark packet capture analysis" />
     </div>
   </div>
 </section>
